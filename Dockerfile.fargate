@@ -49,4 +49,5 @@ ENV PRODUCTION_DATABASE mydb
 ENV DATABASE_USERNAME postgres
 ENV DATABASE_PASSWORD password
 USER nobody
+RUN bundle exec rake db:setup 
 CMD bundle exec unicorn -c config/unicorn.rb
